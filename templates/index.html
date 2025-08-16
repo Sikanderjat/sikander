@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sikander • Python Developer</title>
+    <meta name="description"
+        content="Sikander — Full‑Stack Python Developer (Flask/Django, MySQL). Projects, experience, and contact.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Added Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#home" class="logo">Sikander<span class="accent">.</span></a>
+                <nav class="nav">
+                    <button class="nav-toggle" aria-label="Toggle navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu">
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#experience" class="nav-link">Experience</a></li>
+                        <li><a href="#education" class="nav-link">Education</a></li>
+                        <li><a href="#skills" class="nav-link">Skills</a></li>
+                        <li><a href="#projects" class="nav-link">Projects</a></li>
+                        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-subtitle">Full‑Stack Python Developer</p>
+                    <h1 class="hero-title">Hi, I'm <span class="accent">Sikander</span><br>I build robust web
+                        applications</h1>
+                    <p class="hero-description">Specializing in Python (Flask/Django), MySQL, and modern web
+                        technologies. I create scalable backend solutions and clean user interfaces.</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                        <a class="btn btn-secondary" href="{{url_for('static', filename = 'sikander_resume.pdf')}}"
+                            target="_blank" rel="noopener">Resume ↗</a>
+                        <!-- <a class="btn btn-secondary" href="https://drive.google.com/file/d/171AFkeGsgTfRlU8xBgioVLCZiY4J6ayI/view?usp=drive_link "
+                            target="_blank" rel="noopener">Resume ↗</a> -->
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-placeholder">
+                        <div class="code-snippet">
+                            <div class="code-line">from flask import Flask</div>
+                            <div class="code-line">app = Flask(__name__)</div>
+                            <div class="code-line">@app.route('/')</div>
+                            <div class="code-line">def hello():</div>
+                            <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;return 'Hello Sikander!'</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Passionate about building efficient and scalable web solutions</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a full‑stack developer with a strong focus on Python and backend development. I enjoy
+                        building products from the ground up — from designing clean, accessible user interfaces to
+                        developing robust APIs and database architectures.</p>
+                    <p>My experience spans across Flask, Django, MySQL, and modern frontend technologies. I'm passionate
+                        about writing clean, maintainable code and creating seamless user experiences.</p>
+                    <div class="achievements">
+                        <div class="achievement">
+                            <h4>🎯 Focus Areas</h4>
+                            <p>Backend APIs, Data Dashboards, Automation Tools</p>
+                        </div>
+                        <div class="achievement">
+                            <h4>💼 Experience</h4>
+                            <p>10+ Projects, Internships, Freelance Work</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-info">
+                    <div class="info-card">
+                        <h3>Quick Info</h3>
+                        <div class="info-item">
+                            <span class="label">Location:</span>
+                            <span class="value">Jaipur, Rajasthan</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Available for:</span>
+                            <span class="value">Internships, Freelance, Full-time</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Email:</span>
+                            <span class="value"><a
+                                    href="mailto:sikandergrade@gmail.com">sikandergrade@gmail.com</a></span>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/sikander2703" target="_blank" class="social-link">GitHub</a>
+                            <a href="https://www.linkedin.com/in/sikander-choudhary-b10944250/" target="_blank"
+                                class="social-link">LinkedIn</a>
+                            <a href="https://www.hackerrank.com/profile/sikandergrade" target="_blank"
+                                class="social-link">Hackerrank</a>
+                            <a href="https://leetcode.com/u/sikanderjat/" target="_blank"
+                                class="social-link">Leetcode</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience</h2>
+                <p class="section-subtitle">My professional journey and work experience</p>
+            </div>
+            <ol class="timeline">
+                <li>
+                    <div class="time">May 2025 — Jul 2026</div>
+                    <div class="content">
+                        <h3>Full Stack Developer — ALDS Solution</h3>
+                        <p>Built and customized responsive websites using WordPress, HTML and CSS ensuring cross-browser
+                            compatibility. Collaborated with designers and integrated plugins, forms, and APIs to
+                            enhance website functionality.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="time">May 2024 — Jun 2024</div>
+                    <div class="content">
+                        <h3>Python Developer Intern — GIP Technologies Pvt. Ltd.</h3>
+                        <p>Developed and debugged Flask-based web applications using Python, HTML/CSS, and MySQL,
+                            improving code efficiency by 25%. Implemented secure authentication systems and database
+                            schemas.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="time">Freelance</div>
+                    <div class="content">
+                        <h3>WordPress Developer — Self-Employed</h3>
+                        <p>Built 10+ responsive WordPress websites. Achieved 95% client satisfaction rate through
+                            iterative feedback loops.</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Education</h2>
+                <p class="section-subtitle">My academic journey and qualifications</p>
+            </div>
+            <div class="education-timeline">
+                <div class="education-item">
+                    <div class="education-date">2022 — 2026</div>
+                    <div class="education-content">
+                        <h3>BTech in Computer Science & Engineering</h3>
+                        <h4>Specialization in Artificial Intelligence & Data Science</h4>
+                        <p class="institution">Poornima University, Jaipur</p>
+                        <div class="grade">CGPA: 7.62 (6th Semester)</div>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="education-date">2020 — 2021</div>
+                    <div class="education-content">
+                        <h3>Senior Secondary (PCM)</h3>
+                        <p class="institution">Target School, Jaipur</p>
+                        <div class="grade">Percentage: 94%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">Technologies and tools I work with</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-icon">🐍</div>
+                    <h3>Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <!-- <span class="tag">JavaScript</span> -->
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon">⚡</div>
+                    <h3>Frameworks & Libraries</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Django</span>
+                        <span class="tag">Flask</span>
+                        <span class="tag">SQLite3</span>
+                        <span class="tag">MySQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon">🛠️</div>
+                    <h3>Tools & Platforms</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Git</span>
+                        <span class="tag">WordPress</span>
+                        <span class="tag">VS Code</span>
+                        <span class="tag">Jupyter Notebook</span>
+                        <!-- <span class="tag">REST APIs</span> -->
+                        <!-- <span class="tag">Database Design</span> -->
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon">🧠</div>
+                    <h3>Soft Skills</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Problem-Solving</span>
+                        <span class="tag">Team Collaboration</span>
+                        <span class="tag">Time Management</span>
+                        <span class="tag">Leadership</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Some of my recent work and side projects</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">💰</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Personal Finance Manager</h3>
+                        <p>A comprehensive Flask application with user authentication, expense tracking, and SQLite3
+                            storage. Features clean UI and exportable financial reports.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">#Flask</span>
+                            <span class="tech-tag">#SQLite3</span>
+                            <span class="tech-tag">#Charts.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://finance-manager-opal.vercel.app/" class="project-link" target="_blank">Live
+                                Demo</a>
+                            <a href="https://github.com/Sikanderjat/finance_manager" class="project-link secondary"
+                                target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">🌤️</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Weather Dashboard</h3>
+                        <p>Flask-based weather application that fetches real-time data from external APIs and visualizes
+                            multi-day forecasts with interactive charts.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">#Flask</span>
+                            <span class="tech-tag">#API Integration</span>
+                            <!-- <span class="tech-tag">#JavaScript</span> -->
+                        </div>
+                        <div class="project-links">
+                            <a href="https://weather-app-with-database.vercel.app/" class="project-link"
+                                target="_blank">Live Demo</a>
+                            <a href="https://github.com/Sikanderjat/weather_app_with_database"
+                                class="project-link secondary" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">🤖</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Telegram QR Bot</h3>
+                        <p>Automated Telegram bot that converts text to QR codes. Built with Python, includes admin
+                            functionality and comprehensive logging system.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">#Python</span>
+                            <span class="tech-tag">#Telegram API</span>
+                            <span class="tech-tag">#Automation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://t.me/qr_codeGenerat_bot" class="project-link" target="_blank">Live Demo</a>
+                            <a href="https://github.com/Sikanderjat/QR_CODE_TELEGRAM_BOT" class="project-link secondary"
+                                target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">📧</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Bulk Email Sender</h3>
+                        <p>Automated bulk email delivery for 1k+ recipients with real-time status updates and attachment
+                            support.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">#Python</span>
+                            <span class="tech-tag">#SMTP</span>
+                            <span class="tech-tag">#Automation</span>
+                        </div>
+                        <div class="project-links">
+                            <!-- <a href="#" class="project-link">Live Demo</a> -->
+                            <a href="https://github.com/Sikanderjat/Bulk_email_sender" class="project-link secondary"
+                                target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">🌐</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Link Shortener Web App</h3>
+                        <p>Built a scalable URL shortening platform with unique code generation, redirection logic, and
+                            PostgreSQL database integration via NeonDB.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">#Python</span>
+                            <span class="tech-tag">#Flask</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://link-shortner-mauve.vercel.app/" class="project-link" target="_blank">Live
+                                Demo</a>
+                            <a href="https://github.com/Sikanderjat/link_shortner" class="project-link secondary"
+                                target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">📊</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Attendance Checker App</h3>
+                        <p>Enabling students to monitor attendance and track bunk days</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">#Python</span>
+                            <span class="tech-tag">#Flask</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://attendance-checker-alpha.vercel.app/" class="project-link"
+                                target="_blank">Live
+                                Demo</a>
+                            <a href="https://github.com/Sikanderjat/attendance_checker" class="project-link secondary"
+                                target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements & Certifications Section -->
+    <section id="achievements" class="achievements-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Achievements & Certifications</h2>
+                <p class="section-subtitle">Recognition and continuous learning milestones</p>
+            </div>
+
+            <!-- Achievements -->
+            <div class="achievements-grid">
+                <div class="achievement-category">
+                    <div class="achievement-icon">🏆</div>
+                    <h3>Achievements</h3>
+                    <div class="achievement-list">
+                        <div class="achievement-item">
+                            <a href="https://drive.google.com/file/d/1LusyqC3QdKnNaqaE7RORlUb3PL7eesHN/view?usp=sharing"
+                                target="_blank">
+                                <h4>Flipkart Hackathon Participant</h4>
+                            </a>
+                            <p>Competed in a Flipkart-hosted hackathon, applying problem-solving and coding skills in a
+                                competitive environment.</p>
+                        </div>
+                        <div class="achievement-item">
+                            <a href="https://drive.google.com/file/d/1nZZrFgIVYcgfcWBmmfrKj41bHx_ZgRV7/view?usp=drive_link"
+                                target="_blank">
+                                <h4>Tata Crucible Campus Quiz 2024 – Participant</h4>
+                            </a>
+                            <p> Participated in the Tata Crucible Campus Quiz 2024, organized by the Tata Group,
+                                representing Poornima University (PU), Jaipur. This experience enhanced problem-solving,
+                                analytical thinking, and general awareness through a competitive quiz environment.</p>
+                        </div>
+                        <div class="achievement-item">
+                            <a href="https://drive.google.com/file/d/1h21iba0Upwx-AGQpphzrkdf9303F_jgK/view?usp=drive_link"
+                                target="_blank">
+                                <h4>RSCIT Examination – Certified (Oct 2021)</h4>
+                            </a>
+                            <p>Successfully cleared the Rajasthan State Certificate in Information Technology (RSCIT)
+                                Examination, conducted by Vardhman Mahaveer Open University (VMOU), Kota in
+                                collaboration with RKCL. The certification validates knowledge and skills in computer
+                                fundamentals, internet, MS Office, and digital literacy. </p>
+                        </div>
+                        <div class="achievement-item">
+                            <h4>Team Supervisor at IIFA Show (Jaipur)</h4>
+                            <p>Led and managed a team during the IIFA event in Jaipur, ensuring smooth coordination and
+                                execution of tasks.</p>
+                        </div>
+                        <div class="achievement-item">
+                            <h4>Event Management Volunteer</h4>
+                            <p>Contributed to event management and coordination at major concerts, including Karan Aujla
+                                Show, Arijit Singh Show, and IIFA Show in Jaipur.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="achievement-category">
+                    <div class="achievement-icon">📜</div>
+                    <h3>Certifications</h3>
+                    <div class="certification-list">
+                        <div class="certification-item">
+                            <a href="https://drive.google.com/file/d/1nGjQCLdLrjD2mEkkQO_yKHuHP_dDNf0r/view?usp=drive_link"
+                                target="_blank">
+                                <h4>Basics of Python</h4>
+                            </a>
+                            <p class="cert-provider">Infosys Springboard • 2024</p>
+                        </div>
+                        <div class="certification-item">
+                            <a href="https://drive.google.com/file/d/1pabX9qQDMMjRxOAN0VpEp0K6yXZii-An/view?usp=drive_link"
+                                target="_blank">
+                                <h4>Python for Data Science</h4>
+                            </a>
+                            <p class="cert-provider">IIT Madras (NPTEL) • 2023</p>
+                        </div>
+                        <div class="certification-item">
+                            <a href="https://drive.google.com/file/d/16oaNhGMxUQVWzxCTHxRVM0da21ix9dD2/view?usp=drive_link"
+                                target="_blank">
+                                <h4>Python 101 for Data Science – Certified</h4>
+                            </a>
+                            <p class="cert-provider">IBM Developer Skills Network• 2025 </p>
+                        </div>
+                        <div class="certification-item">
+                            <a href="https://drive.google.com/file/d/1RbeWioeW8IUw_KybY5L6b-KQSSXuNF3p/view?usp=drive_link"
+                                target="_blank">
+                                <h4>Programming Fundamentals in Python</h4>
+                            </a>
+                            <p class="cert-provider">Infosys Springboard • 2024</p>
+                        </div>
+                        <div class="certification-item">
+                            <a href="https://drive.google.com/file/d/1JV2Xa6z-o2TTiqtGfKpuuK4kvH1wb-Gz/view?usp=drive_link"
+                                target="_blank">
+                                <h4>Introduction to NoSQL databases</h4>
+                            </a>
+                            <p class="cert-provider">Infosys Springboard • 2024</p>
+                        </div>
+                        <div class="certification-item">
+                            <a href="https://drive.google.com/file/d/1j2hrGMMEMcoYR48b5NsiU9ymTTLESVa6/view?usp=drive_link"
+                                target="_blank">
+                                <h4>Python Essential Training</h4>
+                            </a>
+                            <p class="cert-provider">LinkedIn Learning • 2023</p>
+                        </div>
+                        <div class="certification-item">
+                            <a href="https://drive.google.com/file/d/1pcd_X5-NDfBvtzcflys8pFxgIX5wnvKl/view?usp=drive_link"
+                                target="_blank">
+                                <h4>Python Programming</h4>
+                            </a>
+                            <p class="cert-provider">Let's Upgrade • 2023</p>
+                        </div>
+                        <div class="certification-item">
+                            <a href="https://drive.google.com/file/d/1D5ReARsdHLA6PSwCCO3EDaCzMXCBV8mf/view?usp=drive_link"
+                                target="_blank">
+                                <h4>Python Fundamentals for Beginners </h4>
+                            </a>
+                            <p class="cert-provider"> Great Learning Academy • 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container contact">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2 class="section-title">Let's Work Together</h2>
+                    <p class="contact-description">Have a project in mind or want to discuss opportunities? I'd love to
+                        hear from you. Send me a message and I'll get back to you soon.</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <span class="contact-icon">📧</span>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:sikandergrade@gmail.com">sikandergrade@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <span class="contact-icon">📍</span>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Jaipur, Rajasthan, India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" method="POST" action="https://formspree.io/f/myzpvbjw">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mode Switch Button  -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Sikander. Built with Python & Flask.</p>
+                <div class="footer-links">
+                    <!-- Replaced text links with Font Awesome icons -->
+                    <a href="https://github.com/sikander2703" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sikander-choudhary-b10944250/" target="_blank"
+                        aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.hackerrank.com/profile/sikandergrade" target="_blank" aria-label="HackerRank">
+                        <i class="fab fa-hackerrank"></i>
+                    </a>
+                    <a href="https://leetcode.com/u/sikanderjat/" target="_blank" aria-label="LeetCode">
+                        <i class="fas fa-code"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+# env files
+.env*
+
+# vercel
+.vercel
+
