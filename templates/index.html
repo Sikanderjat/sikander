@@ -7,13 +7,13 @@
     <title>Sikander • Python Developer</title>
     <meta name="description"
         content="Sikander — Full‑Stack Python Developer (Flask/Django, MySQL). Projects, experience, and contact.">
-    
+
     <!-- Updated favicon links to use Flask url_for syntax -->
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon-16x16.png') }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -37,10 +37,10 @@
                     </button>
                     <ul class="nav-menu">
                         <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#experience" class="nav-link">Experience</a></li>
                         <li><a href="#education" class="nav-link">Education</a></li>
                         <li><a href="#skills" class="nav-link">Skills</a></li>
                         <li><a href="#projects" class="nav-link">Projects</a></li>
-                        <li><a href="#experience" class="nav-link">Experience</a></li>
                         <li><a href="#achievements" class="nav-link">Achievements</a></li>
                         <li><a href="#contact" class="nav-link">Contact</a></li>
                     </ul>
@@ -62,6 +62,7 @@
                     <div class="hero-buttons">
                         <a href="#projects" class="btn btn-primary">View Projects</a>
                         <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                        <a href="{{url_for('static', filename = 'sikander_resume.pdf')}} " target = "_blank" class="btn btn-secondary">Resume</a>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -131,6 +132,44 @@
         </div>
     </section>
 
+    <!-- Experience Section -->
+    <section id="experience" class="section alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience</h2>
+                <p class="section-subtitle">My professional journey and work experience</p>
+            </div>
+            <ol class="timeline">
+                <li>
+                    <div class="time">May 2025 — Jul 2026</div>
+                    <div class="content">
+                        <h3>Full Stack Developer — ALDS Solution</h3>
+                        <p>Built and customized responsive websites using WordPress, HTML and CSS ensuring cross-browser
+                            compatibility. Collaborated with designers and integrated plugins, forms, and APIs to
+                            enhance website functionality.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="time">May 2024 — Jun 2024</div>
+                    <div class="content">
+                        <h3>Python Developer Intern — GIP Technologies Pvt. Ltd.</h3>
+                        <p>Developed and debugged Flask-based web applications using Python, HTML/CSS, and MySQL,
+                            improving code efficiency by 25%. Implemented secure authentication systems and database
+                            schemas.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="time">Freelance</div>
+                    <div class="content">
+                        <h3>WordPress Developer — Self-Employed</h3>
+                        <p>Built 10+ responsive WordPress websites. Achieved 95% client satisfaction rate through
+                            iterative feedback loops.</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
     <!-- Education Section -->
     <section id="education" class="education">
         <div class="container">
@@ -145,7 +184,7 @@
                         <h3>BTech in Computer Science & Engineering</h3>
                         <h4>Specialization in Artificial Intelligence & Data Science</h4>
                         <p class="institution">Poornima University, Jaipur</p>
-                        <div class="grade">CGPA: 7.62 (5th Semester)</div>
+                        <div class="grade">CGPA: 7.62 (6th Semester)</div>
                     </div>
                 </div>
                 <div class="education-item">
@@ -219,112 +258,268 @@
                 <h2 class="section-title">Featured Projects</h2>
                 <p class="section-subtitle">Some of my recent work and side projects</p>
             </div>
+            <!-- Enhanced projects grid with improved styling and structure -->
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card featured">
                     <div class="project-image">
-                        <div class="project-placeholder">💰</div>
+                        <div class="project-placeholder finance">💰</div>
+                        <div class="project-overlay">
+                            <span class="project-category">Web Application</span>
+                        </div>
                     </div>
                     <div class="project-content">
-                        <h3>Personal Finance Manager | Flask, SQLite3 <a href="#" class="deployed-link">Deployed link</a></h3>
-                        <ul class="project-details">
-                            <li>Engineered a web app with user authentication, expense tracking, and financial reporting.</li>
-                            <li><strong>Result:</strong> Track income and expenses.</li>
-                            <li><a href="#" class="github-link">GitHub</a></li>
-                        </ul>
+                        <h3>Personal Finance Manager</h3>
+                        <p class="project-description">Engineered a comprehensive web application with user authentication, expense tracking, and financial reporting capabilities.</p>
+                        <div class="project-highlights">
+                            <div class="highlight-item">
+                                <span class="highlight-icon">✓</span>
+                                <span>Track income and expenses efficiently</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">✓</span>
+                                <span>Interactive financial dashboards</span>
+                            </div>
+                        </div>
                         <div class="project-tech">
-                            <span class="tech-tag">Flask</span>
-                            <span class="tech-tag">SQLite3</span>
-                            <span class="tech-tag">Charts.js</span>
+                            <span class="tech-tag flask">#Flask</span>
+                            <span class="tech-tag database">#SQLite3</span>
+                            
+                        </div>
+                        <div class="actions">
+                            <a class="btn btn-primary" href="https://finance-manager-opal.vercel.app/" target="_blank" rel="noopener">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15,3 21,3 21,9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Live Demo
+                            </a>
+                            <a class="btn btn-secondary" href="https://github.com/Sikanderjat/finance_manager" target="_blank" rel="noopener">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                                Source Code
+                            </a>
                         </div>
                     </div>
                 </div>
+
                 <div class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">🔗</div>
+                        <div class="project-placeholder link">🔗</div>
+                        <div class="project-overlay">
+                            <span class="project-category">URL Shortener</span>
+                        </div>
                     </div>
                     <div class="project-content">
-                        <h3>Link Shortener Web App | Python, SMTP, Flask <a href="#" class="deployed-link">Deployed link</a></h3>
-                        <ul class="project-details">
-                            <li>Built a scalable URL shortening platform with unique code generation, redirection logic, and PostgreSQL database integration via NeonDB.</li>
-                            <li><strong>Result:</strong> Enabled efficient link management.</li>
-                            <li><a href="#" class="github-link">GitHub</a></li>
-                        </ul>
+                        <h3>Link Shortener Web App</h3>
+                        <p class="project-description">Built a scalable URL shortening platform with unique code generation, redirection logic, and PostgreSQL database integration via NeonDB.</p>
+                        <div class="project-highlights">
+                            <div class="highlight-item">
+                                <span class="highlight-icon">✓</span>
+                                <span>Efficient link management system</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">✓</span>
+                                <span>Custom short URL generation</span>
+                            </div>
+                        </div>
                         <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Flask</span>
-                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag python">#Python</span>
+                            <span class="tech-tag flask">#Flask</span>
+                            
+                        </div>
+                        <div class="actions">
+                            <a class="btn btn-primary" href="https://link-shortner-mauve.vercel.app/" target="_blank" rel="noopener">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15,3 21,3 21,9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Live Demo
+                            </a>
+                            <a class="btn btn-secondary" href="https://github.com/Sikanderjat/link_shortner" target="_blank" rel="noopener">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                                Source Code
+                            </a>
                         </div>
                     </div>
                 </div>
+
                 <div class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">📧</div>
+                        <div class="project-placeholder email">📧</div>
+                        <div class="project-overlay">
+                            <span class="project-category">Automation Tool</span>
+                        </div>
                     </div>
                     <div class="project-content">
-                        <h3>Bulk Email Sender | Python, SMTP</h3>
-                        <ul class="project-details">
-                            <li>Automated bulk email delivery for 1k+ recipients with real-time status updates and attachment support.</li>
-                            <li><strong>Result:</strong> Reduced manual effort by 80%.</li>
-                            <li><a href="#" class="github-link">GitHub</a></li>
-                        </ul>
+                        <h3>Bulk Email Sender</h3>
+                        <p class="project-description">Automated bulk email delivery system for 1k+ recipients with real-time status updates and attachment support.</p>
+                        <div class="project-highlights">
+                            <div class="highlight-item">
+                                <span class="highlight-icon">✓</span>
+                                <span>Reduced manual effort by 80%</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">✓</span>
+                                <span>Real-time delivery tracking</span>
+                            </div>
+                        </div>
                         <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">SMTP</span>
-                            <span class="tech-tag">Automation</span>
+                            <span class="tech-tag python">#Python</span>
+                            <span class="tech-tag automation">#SMTP</span>
+                            <span class="tech-tag automation">#Automation</span>
+                        </div>
+                        <div class="actions">
+                            <a class="btn btn-primary" href="#" target="_blank" rel="noopener">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15,3 21,3 21,9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Live Demo
+                            </a>
+                            <a class="btn btn-secondary" href="https://github.com/Sikanderjat/Bulk_email_sender" target="_blank" rel="noopener">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                                Source Code
+                            </a>
                         </div>
                     </div>
                 </div>
+
                 <div class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">📊</div>
+                        <div class="project-placeholder analytics">📊</div>
+                        <div class="project-overlay">
+                            <span class="project-category">Analytics App</span>
+                        </div>
                     </div>
                     <div class="project-content">
-                        <h3>Attendance Checker App | Python, Flask <a href="#" class="deployed-link">Deployed link</a></h3>
-                        <ul class="project-details">
-                            <li>Enabling students to monitor attendance and track bunk days.</li>
-                            <li>Integrated analytical features to help students plan attendance and avoid shortfall.</li>
-                            <li><a href="#" class="github-link">GitHub</a></li>
-                        </ul>
+                        <h3>Attendance Checker App</h3>
+                        <p class="project-description">Enabling students to monitor attendance and track bunk days with integrated analytical features to help plan attendance and avoid shortfall.</p>
+                        <div class="project-highlights">
+                            <div class="highlight-item">
+                                <span class="highlight-icon">✓</span>
+                                <span>Smart attendance tracking</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">✓</span>
+                                <span>Predictive analytics for planning</span>
+                            </div>
+                        </div>
                         <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Flask</span>
-                            <span class="tech-tag">Analytics</span>
+                            <span class="tech-tag python">#Python</span>
+                            <span class="tech-tag flask">#Flask</span>
+                            <span class="tech-tag analytics">#Analytics</span>
+                        </div>
+                        <div class="actions">
+                            <a class="btn btn-primary" href="https://attendance-checker-alpha.vercel.app/" target="_blank" rel="noopener">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15,3 21,3 21,9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Live Demo
+                            </a>
+                            <a class="btn btn-secondary" href="https://github.com/Sikanderjat/attendance_checker" target="_blank" rel="noopener">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                                Source Code
+                            </a>
                         </div>
                     </div>
                 </div>
+
                 <div class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">🌤️</div>
+                        <div class="project-placeholder weather">🌤️</div>
+                        <div class="project-overlay">
+                            <span class="project-category">Weather API</span>
+                        </div>
                     </div>
                     <div class="project-content">
-                        <h3>Weather App Project | Python, Django, MySQL <a href="#" class="deployed-link">Deployed link</a></h3>
-                        <ul class="project-details">
-                            <li>Leveraged external APIs to display current weather information.</li>
-                            <li><strong>Result:</strong> Get real time weather condition.</li>
-                            <li><a href="#" class="github-link">GitHub</a></li>
-                        </ul>
+                        <h3>Weather App Project</h3>
+                        <p class="project-description">Leveraged external APIs to display current weather information with real-time updates and location-based forecasting.</p>
+                        <div class="project-highlights">
+                            <div class="highlight-item">
+                                <span class="highlight-icon">✓</span>
+                                <span>Real-time weather conditions</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">✓</span>
+                                <span>Location-based forecasting</span>
+                            </div>
+                        </div>
                         <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Django</span>
-                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag python">#Python</span>
+                            <span class="tech-tag django">#Django</span>
+                            <span class="tech-tag database">#MySQL</span>
+                        </div>
+                        <div class="actions">
+                            <a class="btn btn-primary" href="https://weather-app-with-database.vercel.app/" target="_blank" rel="noopener">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15,3 21,3 21,9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Live Demo
+                            </a>
+                            <a class="btn btn-secondary" href="https://github.com/Sikanderjat/weather_app_with_database" target="_blank" rel="noopener">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                                Source Code
+                            </a>
                         </div>
                     </div>
                 </div>
+
                 <div class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">🤖</div>
+                        <div class="project-placeholder bot">🤖</div>
+                        <div class="project-overlay">
+                            <span class="project-category">Telegram Bot</span>
+                        </div>
                     </div>
                     <div class="project-content">
-                        <h3>Qr_Code Generator Bot | Python, Telegram <a href="#" class="deployed-link">Deployed Link</a></h3>
-                        <ul class="project-details">
-                            <li>Telegram bot to generate QR codes from text input.</li>
-                            <li><strong>Result:</strong> Generate QR code of any text.</li>
-                            <li><a href="#" class="github-link">GitHub</a></li>
-                        </ul>
+                        <h3>QR Code Generator Bot</h3>
+                        <p class="project-description">Telegram bot to generate QR codes from text input with instant processing and high-quality output generation.</p>
+                        <div class="project-highlights">
+                            <div class="highlight-item">
+                                <span class="highlight-icon">✓</span>
+                                <span>Generate QR code of any text</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">✓</span>
+                                <span>Instant bot response</span>
+                            </div>
+                        </div>
                         <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Telegram API</span>
-                            <span class="tech-tag">Automation</span>
+                            <span class="tech-tag python">#Python</span>
+                            <span class="tech-tag api">#Telegram API</span>
+                            <span class="tech-tag automation">#Automation</span>
+                        </div>
+                        <div class="actions">
+                            <a class="btn btn-primary" href="https://t.me/qr_codeGenerat_bot" target="_blank" rel="noopener">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15,3 21,3 21,9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Live Demo
+                            </a>
+                            <a class="btn btn-secondary" href="https://github.com/Sikanderjat/QR_CODE_TELEGRAM_BOT" target="_blank" rel="noopener">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                                Source Code
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -332,38 +527,6 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section alt">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Experience</h2>
-                <p class="section-subtitle">My professional journey and work experience</p>
-            </div>
-            <ol class="timeline">
-                <li>
-                    <div class="time">May 2025 — Jul 2026</div>
-                    <div class="content">
-                        <h3>Full Stack Developer — ALDS Solution</h3>
-                        <p>Built and customized responsive websites using WordPress, HTML and CSS ensuring cross-browser compatibility. Collaborated with designers and integrated plugins, forms, and APIs to enhance website functionality.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="time">May 2024 — Jun 2024</div>
-                    <div class="content">
-                        <h3>Python Developer Intern — GIP Technologies Pvt. Ltd.</h3>
-                        <p>Developed and debugged Flask-based web applications using Python, HTML/CSS, and MySQL, improving code efficiency by 25%. Implemented secure authentication systems and database schemas.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="time">Freelance</div>
-                    <div class="content">
-                        <h3>WordPress Developer — Self-Employed</h3>
-                        <p>Built 10+ responsive WordPress websites. Achieved 95% client satisfaction rate through iterative feedback loops.</p>
-                    </div>
-                </li>
-            </ol>
-        </div>
-    </section>
 
     <!-- Achievements & Certifications Section -->
     <section id="achievements" class="achievements-section">
@@ -372,7 +535,7 @@
                 <h2 class="section-title">Achievements & Certifications</h2>
                 <p class="section-subtitle">Recognition and continuous learning milestones</p>
             </div>
-            
+
             <!-- Achievements -->
             <div class="achievements-grid">
                 <div class="achievement-category">
@@ -380,43 +543,94 @@
                     <h3>Achievements</h3>
                     <div class="achievement-list">
                         <div class="achievement-item">
-                            <h4>Flipkart Hackathon Participant</h4>
-                            <p>Competed in a Flipkart-hosted hackathon, applying problem-solving and coding skills in a competitive environment.</p>
+                            <a href="https://drive.google.com/file/d/1LusyqC3QdKnNaqaE7RORlUb3PL7eesHN/view?usp=drive_link"
+                                target="_blank">
+                                <h4>Flipkart Hackathon Participant</h4>
+                            </a>
+                            <p>Competed in a Flipkart-hosted hackathon, applying problem-solving and coding skills in a
+                                competitive environment.</p>
+                        </div>
+                        <div class="achievement-item">
+                            <a href="https://drive.google.com/file/d/1nZZrFgIVYcgfcWBmmfrKj41bHx_ZgRV7/view?usp=drive_link"
+                                target="_blank">
+                                <h4>Tata Crucible Campus Quiz 2024</h4>
+                            </a>
+                            <p>Participated in the Tata Crucible Campus Quiz 2024,
+                                organized by the Tata Group, representing Poornima University (PU), Jaipur. This
+                                experience
+                                enhanced problem-solving, analytical thinking, and general awareness through a
+                                competitive quiz
+                                environment</p>
+                        </div>
+                        <div class="achievement-item">
+                            <a href="https://drive.google.com/file/d/1h21iba0Upwx-AGQpphzrkdf9303F_jgK/view?usp=drive_link"
+                                target="_blank">
+                                <h4>RSCIT Examination – Certified</h4>
+                            </a>
+                            <p>Information Technology (RSCIT) Examination, conducted by
+                                Vardhman Mahaveer Open University (VMOU), Kota in collaboration with RKCL. The
+                                certification
+                                validates knowledge and skills in computer fundamentals, internet, MS Office, and
+                                digital literacy.
+                            </p>
                         </div>
                         <div class="achievement-item">
                             <h4>Team Supervisor at IIFA Show (Jaipur)</h4>
-                            <p>Led and managed a team during the IIFA event in Jaipur, ensuring smooth coordination and execution of tasks.</p>
+                            <p>Led and managed a team during the IIFA event in Jaipur, ensuring smooth coordination and
+                                execution of tasks.</p>
                         </div>
                         <div class="achievement-item">
                             <h4>Event Management Volunteer</h4>
-                            <p>Contributed to event management and coordination at major concerts, including Karan Aujla Show, Arijit Singh Show, and IIFA Show in Jaipur.</p>
+                            <p>Contributed to event management and coordination at major concerts, including Karan Aujla
+                                Show, Arijit Singh Show, and IIFA Show in Jaipur.</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="achievement-category">
                     <div class="achievement-icon">📜</div>
                     <h3>Certifications</h3>
                     <div class="certification-list">
                         <div class="certification-item">
-                            <h4>Python for Data Science</h4>
+                            <a href="https://drive.google.com/file/d/1pabX9qQDMMjRxOAN0VpEp0K6yXZii-An/view?usp=drive_link" target="_blank">
+                                <h4>Python for Data Science</h4></a>
+
                             <p class="cert-provider">IIT Madras (NPTEL) • 2023</p>
                         </div>
                         <div class="certification-item">
-                            <h4>Programming Fundamentals in Python</h4>
+                           <a href="https://drive.google.com/file/d/1hLy3aa1jvF4r1nBhclKKk2oMXrGkTCEc/view?usp=drive_link" target="_blank">
+                             <h4>Programming Fundamentals in Python</h4></a>
                             <p class="cert-provider">Infosys Springboard • 2024</p>
                         </div>
                         <div class="certification-item">
-                            <h4>Python Essential Training</h4>
+                            <a href="https://drive.google.com/file/d/1j2hrGMMEMcoYR48b5NsiU9ymTTLESVa6/view?usp=drive_link" target="_blank">
+                                <h4>Python Essential Training</h4></a>
                             <p class="cert-provider">LinkedIn Learning • 2023</p>
                         </div>
                         <div class="certification-item">
-                            <h4>Python Programming</h4>
+                            <a href="https://drive.google.com/file/d/1pcd_X5-NDfBvtzcflys8pFxgIX5wnvKl/view?usp=drive_link" target="_blank">
+                                <h4>Python Programming</h4></a>
                             <p class="cert-provider">Let's Upgrade • 2023</p>
                         </div>
                         <div class="certification-item">
-                            <h4>Basics of Python</h4>
+                            <a href="https://drive.google.com/file/d/1nGjQCLdLrjD2mEkkQO_yKHuHP_dDNf0r/view?usp=drive_link" target="_blank">
+                                <h4>Basics of Python</h4></a>
                             <p class="cert-provider">Infosys Springboard • 2024</p>
+                        </div>
+                        <div class="certification-item">
+                            <a href="https://drive.google.com/file/d/16oaNhGMxUQVWzxCTHxRVM0da21ix9dD2/view?usp=drive_link" target="_blank">
+                                <h4>Python 101 for Data Science – Certified</h4></a>
+                            <p class="cert-provider">IBM Developer Skills Network • 2025</p>
+                        </div>
+                        <div class="certification-item">
+                            <a href="https://drive.google.com/file/d/1JV2Xa6z-o2TTiqtGfKpuuK4kvH1wb-Gz/view?usp=drive_link" target="_blank">
+                                <h4>Introduction to NoSQL databases</h4></a>
+                            <p class="cert-provider">Infosys Springboard • 2024</p>
+                        </div>
+                        <div class="certification-item">
+                            <a href="https://drive.google.com/file/d/1D5ReARsdHLA6PSwCCO3EDaCzMXCBV8mf/view?usp=drive_link" target="_blank">
+                                <h4>Python Fundamentals for Beginners</h4></a>
+                            <p class="cert-provider"> Great Learning Academy • 2023</p>
                         </div>
                     </div>
                 </div>
@@ -472,6 +686,7 @@
             </div>
         </div>
     </section>
+    <!-- Mode change button  -->
     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
         <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -506,12 +721,10 @@
                         aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://www.hackerrank.com/profile/sikandergrade" target="_blank"
-                        aria-label="HackerRank">
+                    <a href="https://www.hackerrank.com/profile/sikandergrade" target="_blank" aria-label="HackerRank">
                         <i class="fab fa-hackerrank"></i>
                     </a>
-                    <a href="https://leetcode.com/u/sikanderjat/" target="_blank"
-                        aria-label="LeetCode">
+                    <a href="https://leetcode.com/u/sikanderjat/" target="_blank" aria-label="LeetCode">
                         <i class="fas fa-code"></i>
                     </a>
                 </div>
