@@ -4,11 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sikander • Python Developer</title>
+    <title>Sikander • WordPress Developer</title>
     <meta name="description"
-        content="Sikander — Full‑Stack Python Developer (Flask/Django, MySQL). Projects, experience, and contact.">
+        content="Sikander — Full‑Stack WordPress Developer. Projects, experience, and contact.">
 
-    <!-- Updated favicon links to use Flask url_for syntax -->
+    <link rel="canonical" href="https://www.sikanderjat.in/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.sikanderjat.in/">
+    <meta property="og:title" content="Sikander • WordPress Developer">
+    <meta property="og:description" content="Sikander — Full‑Stack WordPress Developer. Projects, experience, and contact.">
+    <meta property="og:image" content="{{ url_for('static', filename='images/og-preview.jpg', _external=True) }}">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.sikanderjat.in/">
+    <meta name="twitter:title" content="Sikander • WordPress Developer">
+    <meta name="twitter:description" content="Sikander — Full‑Stack WordPress Developer. Projects, experience, and contact.">
+    <meta name="twitter:image" content="{{ url_for('static', filename='images/og-preview.jpg', _external=True) }}">
+
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon-16x16.png') }}">
@@ -17,14 +30,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Added Font Awesome for social media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Restored Flask url_for syntax for CSS file -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sikander Choudhary",
+      "jobTitle": "Full-Stack WordPress Developer",
+      "url": "https://www.sikanderjat.in/",
+      "sameAs": [
+        "https://github.com/sikander2703",
+        "https://github.com/Sikanderjat",
+        "https://www.linkedin.com/in/sikander-choudhary-b10944250/",
+        "https://www.hackerrank.com/profile/sikandergrade",
+        "https://leetcode.com/u/sikanderjat/"
+      ]
+    }
+    </script>
 </head>
 
 <body>
-    <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-content">
@@ -49,12 +76,11 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <p class="hero-subtitle">Full‑Stack Python Developer</p>
+                    <p class="hero-subtitle">Full‑Stack WordPress Developer</p>
                     <h1 class="hero-title">Hi, I'm <span class="accent">Sikander</span><br>I build robust web
                         applications</h1>
                     <p class="hero-description">Specializing in Python (Flask/Django), MySQL, and modern web
@@ -62,7 +88,7 @@
                     <div class="hero-buttons">
                         <a href="#projects" class="btn btn-primary">View Projects</a>
                         <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                        <a href="{{url_for('static', filename = 'sikander_resume.pdf')}} " target = "_blank" class="btn btn-secondary">Resume</a>
+                        <a href="{{url_for('static', filename = 'sikander_resume.pdf')}} " target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Resume</a>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -80,7 +106,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
@@ -122,8 +147,8 @@
                                     href="mailto:sikandergrade@gmail.com">sikandergrade@gmail.com</a></span>
                         </div>
                         <div class="social-links">
-                            <a href="https://github.com/sikander2703" target="_blank" class="social-link">GitHub</a>
-                            <a href="https://www.linkedin.com/in/sikander-choudhary-b10944250/" target="_blank"
+                            <a href="https://github.com/sikander2703" target="_blank" rel="noopener noreferrer" class="social-link">GitHub</a>
+                            <a href="https://www.linkedin.com/in/sikander-choudhary-b10944250/" target="_blank" rel="noopener noreferrer"
                                 class="social-link">LinkedIn</a>
                         </div>
                     </div>
@@ -132,7 +157,6 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
     <section id="experience" class="section alt">
         <div class="container">
             <div class="section-header">
@@ -170,7 +194,6 @@
         </div>
     </section>
 
-    <!-- Education Section -->
     <section id="education" class="education">
         <div class="container">
             <div class="section-header">
@@ -199,7 +222,6 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
             <div class="section-header">
@@ -251,14 +273,12 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Featured Projects</h2>
                 <p class="section-subtitle">Some of my recent work and side projects</p>
             </div>
-            <!-- Enhanced projects grid with improved styling and structure -->
             <div class="projects-grid">
                 <div class="project-card featured">
                     <div class="project-image">
@@ -286,7 +306,7 @@
                             
                         </div>
                         <div class="actions">
-                            <a class="btn btn-primary" href="https://finance-manager-opal.vercel.app/" target="_blank" rel="noopener">
+                            <a class="btn btn-primary" href="https://finance-manager-opal.vercel.app/" target="_blank" rel="noopener noreferrer">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                                     <polyline points="15,3 21,3 21,9"></polyline>
@@ -294,7 +314,7 @@
                                 </svg>
                                 Live Demo
                             </a>
-                            <a class="btn btn-secondary" href="https://github.com/Sikanderjat/finance_manager" target="_blank" rel="noopener">
+                            <a class="btn btn-secondary" href="https://github.com/Sikanderjat/finance_manager" target="_blank" rel="noopener noreferrer">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                                 </svg>
@@ -330,7 +350,7 @@
                             
                         </div>
                         <div class="actions">
-                            <a class="btn btn-primary" href="https://link-shortner-mauve.vercel.app/" target="_blank" rel="noopener">
+                            <a class="btn btn-primary" href="https://link-shortner-mauve.vercel.app/" target="_blank" rel="noopener noreferrer">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                                     <polyline points="15,3 21,3 21,9"></polyline>
@@ -338,7 +358,7 @@
                                 </svg>
                                 Live Demo
                             </a>
-                            <a class="btn btn-secondary" href="https://github.com/Sikanderjat/link_shortner" target="_blank" rel="noopener">
+                            <a class="btn btn-secondary" href="https://github.com/Sikanderjat/link_shortner" target="_blank" rel="noopener noreferrer">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                                 </svg>
@@ -374,7 +394,7 @@
                             <span class="tech-tag automation">#Automation</span>
                         </div>
                         <div class="actions">
-                            <a class="btn btn-primary" href="#" target="_blank" rel="noopener">
+                            <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                                     <polyline points="15,3 21,3 21,9"></polyline>
@@ -382,7 +402,7 @@
                                 </svg>
                                 Live Demo
                             </a>
-                            <a class="btn btn-secondary" href="https://github.com/Sikanderjat/Bulk_email_sender" target="_blank" rel="noopener">
+                            <a class="btn btn-secondary" href="https://github.com/Sikanderjat/Bulk_email_sender" target="_blank" rel="noopener noreferrer">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                                 </svg>
@@ -418,7 +438,7 @@
                             <span class="tech-tag analytics">#Analytics</span>
                         </div>
                         <div class="actions">
-                            <a class="btn btn-primary" href="https://attendance-checker-alpha.vercel.app/" target="_blank" rel="noopener">
+                            <a class="btn btn-primary" href="https://attendance-checker-alpha.vercel.app/" target="_blank" rel="noopener noreferrer">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                                     <polyline points="15,3 21,3 21,9"></polyline>
@@ -426,7 +446,7 @@
                                 </svg>
                                 Live Demo
                             </a>
-                            <a class="btn btn-secondary" href="https://github.com/Sikanderjat/attendance_checker" target="_blank" rel="noopener">
+                            <a class="btn btn-secondary" href="https://github.com/Sikanderjat/attendance_checker" target="_blank" rel="noopener noreferrer">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                                 </svg>
@@ -462,7 +482,7 @@
                             <span class="tech-tag database">#MySQL</span>
                         </div>
                         <div class="actions">
-                            <a class="btn btn-primary" href="https://weather-app-with-database.vercel.app/" target="_blank" rel="noopener">
+                            <a class="btn btn-primary" href="https://weather-app-with-database.vercel.app/" target="_blank" rel="noopener noreferrer">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                                     <polyline points="15,3 21,3 21,9"></polyline>
@@ -470,7 +490,7 @@
                                 </svg>
                                 Live Demo
                             </a>
-                            <a class="btn btn-secondary" href="https://github.com/Sikanderjat/weather_app_with_database" target="_blank" rel="noopener">
+                            <a class="btn btn-secondary" href="https://github.com/Sikanderjat/weather_app_with_database" target="_blank" rel="noopener noreferrer">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                                 </svg>
@@ -506,7 +526,7 @@
                             <span class="tech-tag automation">#Automation</span>
                         </div>
                         <div class="actions">
-                            <a class="btn btn-primary" href="https://t.me/qr_codeGenerat_bot" target="_blank" rel="noopener">
+                            <a class="btn btn-primary" href="https://t.me/qr_codeGenerat_bot" target="_blank" rel="noopener noreferrer">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                                     <polyline points="15,3 21,3 21,9"></polyline>
@@ -514,7 +534,7 @@
                                 </svg>
                                 Live Demo
                             </a>
-                            <a class="btn btn-secondary" href="https://github.com/Sikanderjat/QR_CODE_TELEGRAM_BOT" target="_blank" rel="noopener">
+                            <a class="btn btn-secondary" href="https://github.com/Sikanderjat/QR_CODE_TELEGRAM_BOT" target="_blank" rel="noopener noreferrer">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                                 </svg>
@@ -528,7 +548,6 @@
     </section>
 
 
-    <!-- Achievements & Certifications Section -->
     <section id="achievements" class="achievements-section">
         <div class="container">
             <div class="section-header">
@@ -536,7 +555,6 @@
                 <p class="section-subtitle">Recognition and continuous learning milestones</p>
             </div>
 
-            <!-- Achievements -->
             <div class="achievements-grid">
                 <div class="achievement-category">
                     <div class="achievement-icon">🏆</div>
@@ -544,7 +562,7 @@
                     <div class="achievement-list">
                         <div class="achievement-item">
                             <a href="https://drive.google.com/file/d/1LusyqC3QdKnNaqaE7RORlUb3PL7eesHN/view?usp=drive_link"
-                                target="_blank">
+                                target="_blank" rel="noopener noreferrer">
                                 <h4>Flipkart Hackathon Participant</h4>
                             </a>
                             <p>Competed in a Flipkart-hosted hackathon, applying problem-solving and coding skills in a
@@ -552,7 +570,7 @@
                         </div>
                         <div class="achievement-item">
                             <a href="https://drive.google.com/file/d/1nZZrFgIVYcgfcWBmmfrKj41bHx_ZgRV7/view?usp=drive_link"
-                                target="_blank">
+                                target="_blank" rel="noopener noreferrer">
                                 <h4>Tata Crucible Campus Quiz 2024</h4>
                             </a>
                             <p>Participated in the Tata Crucible Campus Quiz 2024,
@@ -564,7 +582,7 @@
                         </div>
                         <div class="achievement-item">
                             <a href="https://drive.google.com/file/d/1h21iba0Upwx-AGQpphzrkdf9303F_jgK/view?usp=drive_link"
-                                target="_blank">
+                                target="_blank" rel="noopener noreferrer">
                                 <h4>RSCIT Examination – Certified</h4>
                             </a>
                             <p>Information Technology (RSCIT) Examination, conducted by
@@ -592,43 +610,43 @@
                     <h3>Certifications</h3>
                     <div class="certification-list">
                         <div class="certification-item">
-                            <a href="https://drive.google.com/file/d/1pabX9qQDMMjRxOAN0VpEp0K6yXZii-An/view?usp=drive_link" target="_blank">
+                            <a href="https://drive.google.com/file/d/1pabX9qQDMMjRxOAN0VpEp0K6yXZii-An/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                                 <h4>Python for Data Science</h4></a>
 
                             <p class="cert-provider">IIT Madras (NPTEL) • 2023</p>
                         </div>
                         <div class="certification-item">
-                           <a href="https://drive.google.com/file/d/1hLy3aa1jvF4r1nBhclKKk2oMXrGkTCEc/view?usp=drive_link" target="_blank">
+                           <a href="https://drive.google.com/file/d/1hLy3aa1jvF4r1nBhclKKk2oMXrGkTCEc/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                              <h4>Programming Fundamentals in Python</h4></a>
                             <p class="cert-provider">Infosys Springboard • 2024</p>
                         </div>
                         <div class="certification-item">
-                            <a href="https://drive.google.com/file/d/1j2hrGMMEMcoYR48b5NsiU9ymTTLESVa6/view?usp=drive_link" target="_blank">
+                            <a href="https://drive.google.com/file/d/1j2hrGMMEMcoYR48b5NsiU9ymTTLESVa6/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                                 <h4>Python Essential Training</h4></a>
                             <p class="cert-provider">LinkedIn Learning • 2023</p>
                         </div>
                         <div class="certification-item">
-                            <a href="https://drive.google.com/file/d/1pcd_X5-NDfBvtzcflys8pFxgIX5wnvKl/view?usp=drive_link" target="_blank">
+                            <a href="https://drive.google.com/file/d/1pcd_X5-NDfBvtzcflys8pFxgIX5wnvKl/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                                 <h4>Python Programming</h4></a>
                             <p class="cert-provider">Let's Upgrade • 2023</p>
                         </div>
                         <div class="certification-item">
-                            <a href="https://drive.google.com/file/d/1nGjQCLdLrjD2mEkkQO_yKHuHP_dDNf0r/view?usp=drive_link" target="_blank">
+                            <a href="https://drive.google.com/file/d/1nGjQCLdLrjD2mEkkQO_yKHuHP_dDNf0r/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                                 <h4>Basics of Python</h4></a>
                             <p class="cert-provider">Infosys Springboard • 2024</p>
                         </div>
                         <div class="certification-item">
-                            <a href="https://drive.google.com/file/d/16oaNhGMxUQVWzxCTHxRVM0da21ix9dD2/view?usp=drive_link" target="_blank">
+                            <a href="https://drive.google.com/file/d/16oaNhGMxUQVWzxCTHxRVM0da21ix9dD2/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                                 <h4>Python 101 for Data Science – Certified</h4></a>
                             <p class="cert-provider">IBM Developer Skills Network • 2025</p>
                         </div>
                         <div class="certification-item">
-                            <a href="https://drive.google.com/file/d/1JV2Xa6z-o2TTiqtGfKpuuK4kvH1wb-Gz/view?usp=drive_link" target="_blank">
+                            <a href="https://drive.google.com/file/d/1JV2Xa6z-o2TTiqtGfKpuuK4kvH1wb-Gz/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                                 <h4>Introduction to NoSQL databases</h4></a>
                             <p class="cert-provider">Infosys Springboard • 2024</p>
                         </div>
                         <div class="certification-item">
-                            <a href="https://drive.google.com/file/d/1D5ReARsdHLA6PSwCCO3EDaCzMXCBV8mf/view?usp=drive_link" target="_blank">
+                            <a href="https://drive.google.com/file/d/1D5ReARsdHLA6PSwCCO3EDaCzMXCBV8mf/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                                 <h4>Python Fundamentals for Beginners</h4></a>
                             <p class="cert-provider"> Great Learning Academy • 2023</p>
                         </div>
@@ -638,7 +656,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container contact">
             <div class="contact-content">
@@ -663,7 +680,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Fixed contact form to use Formspree instead of Flask route -->
                 <form class="contact-form" method="POST" action="https://formspree.io/f/myzpvbjw">
                     <div class="form-group">
                         <label for="name">Name</label>
@@ -686,7 +702,6 @@
             </div>
         </div>
     </section>
-    <!-- Mode change button  -->
     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
         <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -707,24 +722,22 @@
     </button>
 
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <p>&copy; 2025 Sikander. Built with Python & Flask.</p>
                 <div class="footer-links">
-                    <!-- Replaced text links with Font Awesome icons -->
-                    <a href="https://github.com/Sikanderjat" target="_blank" aria-label="GitHub">
+                    <a href="https://github.com/Sikanderjat" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/sikander-choudhary-b10944250/" target="_blank"
+                    <a href="https://www.linkedin.com/in/sikander-choudhary-b10944250/" target="_blank" rel="noopener noreferrer"
                         aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://www.hackerrank.com/profile/sikandergrade" target="_blank" aria-label="HackerRank">
+                    <a href="https://www.hackerrank.com/profile/sikandergrade" target="_blank" rel="noopener noreferrer" aria-label="HackerRank">
                         <i class="fab fa-hackerrank"></i>
                     </a>
-                    <a href="https://leetcode.com/u/sikanderjat/" target="_blank" aria-label="LeetCode">
+                    <a href="https://leetcode.com/u/sikanderjat/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode">
                         <i class="fas fa-code"></i>
                     </a>
                 </div>
@@ -732,9 +745,9 @@
         </div>
     </footer>
 
-    <!-- Restored Flask url_for syntax for JavaScript file -->
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
 </body>
 
 </html>
+
